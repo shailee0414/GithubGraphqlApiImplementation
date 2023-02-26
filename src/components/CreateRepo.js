@@ -10,7 +10,7 @@ export default function CreateRepo() {
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
         "Authorization",
-        "bearer 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"
+        "bearer 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"
       );
       const graphql = JSON.stringify({
         query: `mutation createRepo {\n createRepository(input:\n{\n  name: "${repoName}",\n  visibility: PUBLIC\n}){\n  repository\n  {\n    name\n    createdAt\n  }\n}\n}`,

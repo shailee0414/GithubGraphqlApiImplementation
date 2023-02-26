@@ -13,7 +13,7 @@ export default function UpdateRepo() {
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
         "Authorization",
-        "bearer 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"
+        "bearer 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"
       );
 
       var graphql = JSON.stringify({
