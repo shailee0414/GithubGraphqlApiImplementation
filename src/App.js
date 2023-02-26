@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CreateRepo from "./components/CreateRepo";
+import RepoList from "./components/RepoList";
+import RepoDetails from "./components/RepoDetails";
+import UpdateRepo from "./components/UpdateRepo";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<RepoList />} />
+        <Route path="/details" exact element={<RepoDetails />} />
+        <Route path="/create" exact element={<CreateRepo />} />
+        <Route path="/update" exact element={<UpdateRepo />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
-
+};
 export default App;
