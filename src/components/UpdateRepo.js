@@ -13,7 +13,7 @@ export default function UpdateRepo() {
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
         "Authorization",
-        "bearer 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"
+        "bearer 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"
       );
 
       var graphql = JSON.stringify({
@@ -54,6 +54,7 @@ export default function UpdateRepo() {
             setRepoName(`${e.target.value}`);
           }}
         ></input>
+        <br></br>
         <label htmlFor="desc">Repository Description: </label>
         <input
           id="desc"
@@ -63,8 +64,7 @@ export default function UpdateRepo() {
             setDescription(`${e.target.value}`);
           }}
         ></input>
-
-        <br></br>
+        <br></br>{" "} <br></br>
         <div
           onClick={() => {
             onSubmit();
